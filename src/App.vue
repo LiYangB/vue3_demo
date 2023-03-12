@@ -8,7 +8,10 @@
     <button >十~二十</button>
   </RouterLink>
   <RouterLink  to="/third" class="bg-[#fafafa] border ml-20px">
-    <button >二十~...</button>
+    <button >二十~二十九</button>
+  </RouterLink>
+  <RouterLink  to="/fouth" class="bg-[#fafafa] border ml-20px">
+    <button >三十~...</button>
   </RouterLink>
   <RouterView></RouterView>
 </template>
