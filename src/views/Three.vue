@@ -36,6 +36,11 @@
     <test-hooks></test-hooks>
     <hr>
 </div>
+<h1>自定义全局变量</h1>
+<div>
+    <h1>{{ $env }}</h1>
+    <hr>
+</div>
 
 </template>
 
