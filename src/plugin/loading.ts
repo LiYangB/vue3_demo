@@ -10,7 +10,7 @@ export default {
         //render 把我们的Vnode 生成真实DOM 并且挂载到指定节点
         render(vnode, document.body)
         // Vue 提供的全局配置 可以自定义
-        app.config.globalProperties.$loading = {
+        app.config.globalProperties.$Loading = {
             show: () => vnode.component?.exposed?.show(),
             hide: () => vnode.component?.exposed?.hide()
         }

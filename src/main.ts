@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 import App from './App.vue'
 import router from './router'
@@ -13,6 +15,7 @@ app.use(createPinia())
 app.use(router)
 app.config.globalProperties.$env = "全局变量"
 app.use(Loading)
+app.use(ElementPlus)
 
 type Lod = {
     show: () => void,
@@ -22,7 +25,7 @@ type Lod = {
 declare module 'vue'{
     export interface ComponentCustomProperties {
         $env: String,
-        $loading: Lod
+        $Loading: Lod
     }
 }
 

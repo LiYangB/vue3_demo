@@ -1,6 +1,8 @@
 <template>
   <h1>欢迎来到vue3+ts课程</h1>
   <div class="test">测试在css中使用js(vue3新加)</div>
+  <ElButton type="danger" @click="randomColor">随机生成颜色</ElButton>
+  <br>
   <RouterLink class="bg-[#fafafa] border ml-20px" to="/first">
     <button>前九课</button>
   </RouterLink>
@@ -17,8 +19,16 @@
 </template>
 
 <script setup lang="ts">
+import type { ElButton } from 'element-plus';
 import { ref } from 'vue';
 let color = ref("red")
+function randomColor() {//得到随机的颜色值
+  var r = Math.floor(Math.random() * 256);
+  var g = Math.floor(Math.random() * 256);
+  var b = Math.floor(Math.random() * 256);
+  color.value = "rgb(" + r + "," + g + "," + b + ")";
+}
+
 </script>
 
 <style>
